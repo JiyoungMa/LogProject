@@ -8,7 +8,9 @@
 
 - [Extract Data From Elastic](#extract-data-from-elastic)
 - [User Retention](#user-retention)
-
+- [Users Without Login](#users-without-login)
+- [Get Rid Of Duplication](#get-rid-of-duplication)
+- [Users Per Id And Ids Per User](#users-per-id-and-ids-per-user)
 
 <h3>프로젝트 환경 설정</h3>
 
@@ -45,5 +47,46 @@
 # User Retention
 
 <h4>한 주 동안 가입한 유저들이 얼마나 로그인을 유지하고 웹사이트에 접속하는지 한 주 단위로 추적하는 코드</h4>
-![image](https://user-images.githubusercontent.com/50768959/141353730-cebffe20-43c9-4662-8767-22ed50ec484e.png)
-![UserRetention](https://user-images.githubusercontent.com/50768959/141353946-98488350-7847-4977-b54d-c7c4d52f7781.png)
+
+- Extract Data From Elastic을 통해 생성한 json 파일과 사전에 제공받은 가입 관련 엑셀파일을 사용
+- 한 주 단위로 로그인 유저들의 retention을 계산
+
+<h3>결과</h3>
+<img src="https://user-images.githubusercontent.com/50768959/141353946-98488350-7847-4977-b54d-c7c4d52f7781.png">
+
+<br><br>
+
+# Users Without Login
+
+<h4> 가입 유저들 중, 로그아웃 상태로 웹사이트에 접근하는 경우가 몇 퍼센트인지 추적하는 코드</h4>
+
+- User Retention과 동일하게 Extract Data From Elastic을 통해 생성한 json 파일과 사전에 제공받은 가입 관련 엑셀 파일을 사용
+- 한 주 단위로 가입 유저들의 비로그인 사용 retention 계산
+
+<h3>결과</h3>
+<img src = "https://user-images.githubusercontent.com/50768959/141354955-cfe0a55f-d35f-43a1-9dd4-2cfed34697a6.png">
+
+<br><br>
+
+# Get Rid Of Duplication
+
+<h4> 가입 유저들이 로그인 또는 비로그인 상태로 웹사이트에 접속하는 retention을 계산하는 코드</h4>
+
+- User Retention와 Users Without Login을 통해 측정한 결과의 중복을 없애기 위한 코드
+
+<h3>결과</h3>
+
+<img src = "https://user-images.githubusercontent.com/50768959/141355379-4e0304a4-4b1f-403a-ac54-d403e6cc453b.png">
+
+<br><br>
+
+# Users Per Id And Ids Per User
+
+<h4> 하나의 IP당 몇 명의 유저들이 있는지, 하나의 유저들이 몇 개의 IP를 사용하는지를 체크하는 코드</h4>
+
+- 같은 ip를 몇 명의 유저들이 공유하는지, 한 유저가 몇 개의 ip를 가지고 있는지를 측정하기 위해 ip별 유저들, 유저 별 ip를 google sheet에 업로드 하는 코드
+
+<h3>결과</h3>
+<img src = "https://user-images.githubusercontent.com/50768959/141355710-0c25ac7f-7f3e-4773-ac9c-4dc09336005f.png">
+<img src = "https://user-images.githubusercontent.com/50768959/141355718-099b95ff-041b-40b8-a24f-5a08f0082de4.png">
+<img src = "https://user-images.githubusercontent.com/50768959/141355726-f7cba6cb-3b3c-4611-9aa7-16a817fc5214.png">
