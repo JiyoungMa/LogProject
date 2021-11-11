@@ -12,7 +12,7 @@ excel_date = ["before"] #엑셀에 각 주의 시작날과 같이 저장하기 �
 user_id = [[]] #retention에 사용할 user_name 기록할 리스트, 0번째 인덱스는 start의 이전에 가입한 사람들의 user_name
 
 #회원들의 가입한 날짜가 저장되어있는 엑셀파일을 읽음
-username_exl = openpyxl.load_workbook('auth_user_re.xlsx') 
+username_exl = openpyxl.load_workbook("#####") 
 username_exl = username_exl['auth_user_re']
 username_exl = username_exl['A':'E']
 
