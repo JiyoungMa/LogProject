@@ -21,7 +21,7 @@
 
 <br><br>
 
-<details open>
+<details close>
   <summary> 프로젝트 설명 </summary>
 
 <h3> 코드 목록  </h3>
@@ -96,7 +96,7 @@
 
 </details>
  
- <details open>
+ <details close>
   <summary> Details of Projects </summary>
   
   <h3> Project List </h3>
